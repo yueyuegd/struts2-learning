@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!--    <global-results>
+        <result name="securityerror">/securityerror.jsp</result>
+    </global-results>
+    <global-exception-mappings>
+        <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="securityerror"></exception-mapping>
+        <exception-mapping name="java.lang.Exception" result="error"></exception-mapping>
+    </global-exception-mappings>-->
+    <!--<package name="helloWorld" extends="struts-default">
+        <action name="HelloWorld" class="Home.Tutorials.Bootstrap.HelloWorld.HelloWorld">
+            <result>/HelloWorld.jsp</result>
+        </action>
+        <action name="Welcome">
+            <result>/Welcome.jsp</result>
+        </action>
+      &lt;!&ndash;  <action name="Logon" class="Home.Tutorals.Bootstrap.CodingActions.Logon">
+            <result name="input">/Logon.jsp</result>
+            <result type="redirectAction">Menu</result>
+        </action>&ndash;&gt;
+        <action name="Logon_*" method="{1}" class="Home.Tutorals.Bootstrap.CodingActions.Logon"/>
+        <action name="*" class="Home.Tutorials.Bootstrap.HelloWorld.TutorialSupport">
+            <result>/{1}.jsp</result>
+        </action>
+        <action name="actionspecificexception" class="org.apache.struts.register.action.Register" method="throwSecurityException">
+            <exception-mapping exception="org.apache.struts.register.exceptions.SecurityBreachException" result="login"></exception-mapping>
+            <result>/register.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+    </package>-->
+
+    <!-- 测试struts2 Form Tags-->
+    <!--开启开发者模式-->
+    <constant name="struts.devMode" value="true"></constant>
+    <package name="basicstruts2" extends="struts-default">
+        <default-action-ref name="index"></default-action-ref>
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        <action name="edit" class="org.apache.struts.edit.action.EditAction" method="execute">
+            <result name="success">/thankyou.jsp</result>
+        </action>
+        <action name="save" class="org.apache.struts.edit.action.EditAction" method="input">
+            <result name="input">/edit.jsp</result>
+        </action>
+    </package>
+</struts>
