@@ -17,6 +17,8 @@
 <s:form action="save" method="post">
     <s:textfield key="personBean.firstName"></s:textfield>
     <s:textfield key="personBean.lastName"></s:textfield>
+    <s:textfield key="personBean.email"></s:textfield>
+    <s:textfield key="personBean.phoneNumber"></s:textfield>
     <s:select list="sports" key="personBean.sport"></s:select>
     <s:radio list="genders" key="personBean.gender"></s:radio>
     <s:select list="states" key="personBean.residency" listKey="stateAbbr" listValue="stateName"></s:select>

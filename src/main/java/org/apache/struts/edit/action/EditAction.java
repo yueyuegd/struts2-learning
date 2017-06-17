@@ -38,6 +38,14 @@ public class EditAction extends ActionSupport {
     }
 
     public Person getPersonBean() {
+        /*personBean = new Person();
+        personBean.setFirstName("Wang");
+        personBean.setLastName("Karry");
+        personBean.setSport("basketball");
+        personBean.setGender("male");
+        personBean.setResidency("BeiJing");
+        personBean.setOver21(false);
+        personBean.setCarModels(new String[]{"AD","BK"});*/
         return personBean;
     }
 

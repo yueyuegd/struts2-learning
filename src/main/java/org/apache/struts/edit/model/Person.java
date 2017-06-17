@@ -1,5 +1,7 @@
 package org.apache.struts.edit.model;
 
+import java.util.Arrays;
+
 /**
  * Created by zhangyue-k on 2017/6/16.
  * User:zhangyue-k
@@ -14,6 +16,8 @@ public class Person {
     private String residency;
     private String[] carModels;
     private boolean over21;
+    private String email;
+    private String phoneNumber;
 
 
     public String getFirstName() {
@@ -56,6 +60,22 @@ public class Person {
         this.sport = sport;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
     public void setGender(String gender) {
         this.gender = gender;
     }
@@ -70,5 +90,20 @@ public class Person {
 
     public void setOver21(boolean over21) {
         this.over21 = over21;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", sport='" + sport + '\'' +
+                ", gender='" + gender + '\'' +
+                ", residency='" + residency + '\'' +
+                ", carModels=" + Arrays.asList(carModels) +
+                ", over21=" + over21 +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }

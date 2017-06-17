@@ -21,6 +21,8 @@ public class EditServideInMemory implements EditService {
         person.setResidency("KS");
         person.setOver21(true);
         person.setCarModels(carModels);
+        person.setEmail("bphillops@ku.edu");
+        person.setPhoneNumber("123-456-9999");
     }
     public Person getPerson() {
         return EditServideInMemory.person;
