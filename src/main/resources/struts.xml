@@ -36,7 +36,7 @@
 
     <!-- 测试struts2 Form Tags-->
     <!--开启开发者模式-->
-    <constant name="struts.devMode" value="true"></constant>
+    <!--<constant name="struts.devMode" value="true"></constant>
     <package name="basicstruts2" extends="struts-default">
         <default-action-ref name="index"></default-action-ref>
         <action name="index">
@@ -48,6 +48,22 @@
         <action name="save" class="org.apache.struts.edit.action.EditAction" method="execute">
             <result name="input">/edit.jsp</result>
             <result name="success">/thankyou.jsp</result>
+        </action>
+    </package>-->
+
+    <!--测试  wildcard method selection -->
+    <constant name="struts.devMode" value="false"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <package name="wildcardmethodexample" extends="struts-default">
+        <action name="*Person" class="org.apache.struts.tutorials.wildcardmethod.action.PersonAction" method="{1}">
+            <result name="success">/view.jsp</result>
+            <result name="input">/input.jsp</result>
+            <allowed-methods>create,edit,delete,saveOrUpdate</allowed-methods>
+        </action>
+        <action name="person!*" class="org.apache.struts.tutorials.wildcardmethod.action.PersonAction" method="run{1}This">
+            <result name="success">/view.jsp</result>
+            <result name="input">/input.jsp</result>
+            <allowed-methods>runCreateThis</allowed-methods>
         </action>
     </package>
 </struts>
