@@ -18,7 +18,8 @@ import java.util.List;
 public class EditAction extends ActionSupport {
 
     private static final long serialVersionID = 1L;
-    private EditService editService = new EditServideInMemory();
+    //private EditService editService = new EditServideInMemory();
+    private EditService editService;
     private Person personBean;
     private String[] sports = {"football","baseball","basketball"};
     private String[] genders = {"male","female","not sure"};
