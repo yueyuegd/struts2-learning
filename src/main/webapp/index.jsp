@@ -19,4 +19,7 @@
 </html>--%>
 
 <!--test wildcard method selection-->
-<% response.sendRedirect("Person.action");%>
+<%--<% response.sendRedirect("Person.action");%>--%>
+
+<!-- test annotations -->
+<% response.sendRedirect("index");%>
